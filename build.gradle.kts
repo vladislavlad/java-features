@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    application
 }
 
 group = "software.darkmatter"
@@ -16,4 +17,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass.set("software.darkmatter.Main")
 }
