@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         JAVA_8.lambda();
         JAVA_8.methodReference();
+        JAVA_8.streamApi();
 
         JAVA_9.httpClient();
         JAVA_9.tryWithResources();
