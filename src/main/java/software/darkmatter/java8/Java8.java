@@ -2,6 +2,7 @@ package software.darkmatter.java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 
 public class Java8 {
@@ -30,5 +31,22 @@ public class Java8 {
                 .map(n -> n * 2)
                 .reduce(Integer::sum).orElse(0);
         System.out.println(r);
+    }
+
+    public void forEach() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.forEach(System.out::println);
+    }
+
+    public void optional() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        Optional<Integer> optionalN = numbers
+                .stream()
+                .findFirst();
+
+        optionalN.map(n -> "N: " + n)
+                 .ifPresent(System.out::println);
     }
 }

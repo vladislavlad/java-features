@@ -12,6 +12,8 @@ public class Main {
         JAVA_8.lambda();
         JAVA_8.methodReference();
         JAVA_8.streamApi();
+        JAVA_8.forEach();
+        JAVA_8.optional();
 
         JAVA_9.httpClient();
         JAVA_9.tryWithResources();
