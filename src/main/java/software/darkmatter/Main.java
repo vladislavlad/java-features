@@ -15,6 +15,7 @@ public class Main {
         JAVA_8.forEach();
         JAVA_8.optional();
         JAVA_8.time();
+        JAVA_8.defaultMethod();
 
         JAVA_9.httpClient();
         JAVA_9.tryWithResources();

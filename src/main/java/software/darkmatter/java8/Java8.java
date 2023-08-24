@@ -73,4 +73,19 @@ public class Java8 {
         OffsetDateTime offsetDateTime10MinAgo = offsetDateTime.minus(duration);
         System.out.println(offsetDateTime10MinAgo);
     }
+
+    public void defaultMethod() {
+
+        interface Named {
+
+            default void printClassName() {
+                System.out.println(this.getClass().getSimpleName());
+            }
+        }
+
+        class SimpleNamed implements Named {}
+
+        Named named = new SimpleNamed();
+        named.printClassName();
+    }
 }
