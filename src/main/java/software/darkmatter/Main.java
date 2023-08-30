@@ -19,5 +19,6 @@ public class Main {
 
         JAVA_9.httpClient();
         JAVA_9.tryWithResources();
+        JAVA_9.interfacePrivateMethod();
     }
 }
