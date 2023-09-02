@@ -8,6 +8,7 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.stream.Stream;
 
 public class Java9 {
 
@@ -58,5 +59,12 @@ public class Java9 {
 
         System.out.println(b.getString1());
         System.out.println(b.getString2());
+    }
+
+    public void streamImprovement() {
+        Stream.of(1, 2, 3)
+              .takeWhile(i -> i < 3)
+              .dropWhile(i -> i < 2)
+              .forEach(System.out::println);
     }
 }
