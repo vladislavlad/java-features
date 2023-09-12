@@ -6,8 +6,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.function.Function;
 
 public class Java8 {
@@ -41,6 +44,15 @@ public class Java8 {
     public void forEach() {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
+        numbers.forEach(System.out::println);
+    }
+
+    public void removeIf() {
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            numbers.add(i);
+        }
+        numbers.removeIf(i -> i < 8);
         numbers.forEach(System.out::println);
     }
 
@@ -87,5 +99,21 @@ public class Java8 {
 
         Named named = new SimpleNamed();
         named.printClassName();
+    }
+
+    public void completableFuture() throws ExecutionException, InterruptedException {
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello");
+        future.thenApplyAsync(String::toUpperCase);
+        String s = future.get();
+        System.out.println(s);
+    }
+
+    public void parallelSort() {
+        int[] array = new int[5];
+        for (int i = 0; i < 5; i++) {
+            array[i] = 60 / (i + 1);
+        }
+        Arrays.parallelSort(array);
+        System.out.println(Arrays.toString(array));
     }
 }

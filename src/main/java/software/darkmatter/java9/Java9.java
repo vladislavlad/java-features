@@ -3,25 +3,13 @@ package software.darkmatter.java9;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
 public class Java9 {
-
-    public void httpClient() throws URISyntaxException, IOException, InterruptedException {
-        HttpClient httpClient = HttpClient.newHttpClient();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                                         .uri(new URI("https://postman-echo.com/get"))
-                                         .GET()
-                                         .build();
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
-    }
 
     public void tryWithResources() {
         try (InputStream is = new ByteArrayInputStream("Hello from try-with-resources".getBytes())) {
@@ -66,5 +54,33 @@ public class Java9 {
               .takeWhile(i -> i < 3)
               .dropWhile(i -> i < 2)
               .forEach(System.out::println);
+    }
+
+    public void diamondAnonymousClass() {
+        BiFunction<Integer, String, String> jsPlus = new BiFunction<>() {
+
+            @Override
+            public String apply(Integer a, String b) {
+                return a.toString() + b;
+            }
+        };
+        System.out.println(jsPlus.apply(1, "1"));
+    }
+
+    public void collectionsFactoryMethods() {
+        List<String> list = List.of("One", "Two", "Three");
+        for (String s : list) {
+            System.out.println(s);
+        }
+
+        Set<String> set = Set.of("One", "Two", "Three");
+        for (String s : set) {
+            System.out.println(s);
+        }
+
+        Map<String, String> map = Map.of("One", "1", "Two", "2");
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 }
