@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 public class Java10 {
 
@@ -29,5 +30,12 @@ public class Java10 {
         unmodifiableList.forEach(System.out::println);
         unmodifiableSet.forEach(System.out::println);
         unmodifiabledMap.forEach((k, v) -> System.out.println(k + "=" + v));
+    }
+
+    public void collectionCopyOf() {
+        var list = List.of(1, 2);
+        var newUnmodifiableList = List.copyOf(list);
+
+        newUnmodifiableList.forEach(System.out::println);
     }
 }

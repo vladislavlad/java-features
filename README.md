@@ -1,2 +1,3 @@
-# java-features
-Java 8 to Java 21 new features in action
+# Java features examples
+### New features in action for each Java version.
+### From Java 8 to Java 21

@@ -32,6 +32,7 @@ public class Main {
 
         JAVA_10.var();
         JAVA_10.immutableCollections();
+        JAVA_10.collectionCopyOf();
 
         JAVA_11.httpClient();
     }
