@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 
 public class Java10 {
 
@@ -37,5 +38,11 @@ public class Java10 {
         var newUnmodifiableList = List.copyOf(list);
 
         newUnmodifiableList.forEach(System.out::println);
+    }
+
+    public void orElseThrow() {
+        Integer value = Optional.ofNullable(1)
+                                .orElseThrow(() -> new RuntimeException("No value present"));
+        System.out.println(value);
     }
 }
