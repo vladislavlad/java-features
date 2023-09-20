@@ -26,6 +26,7 @@ public class Java10 {
         var map = new HashMap<String, Integer>();
         map.put("a", 1);
         map.put("b", 2);
+        map.put("с", 3);
         var unmodifiabledMap = Collections.unmodifiableMap(map);
 
         unmodifiableList.forEach(System.out::println);
