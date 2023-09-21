@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    java
     application
 }
 
@@ -21,4 +21,10 @@ tasks.test {
 
 application {
     mainClass.set("software.darkmatter.Main")
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
