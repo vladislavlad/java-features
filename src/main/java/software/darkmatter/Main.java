@@ -2,6 +2,7 @@ package software.darkmatter;
 
 import software.darkmatter.java10.Java10;
 import software.darkmatter.java11.Java11;
+import software.darkmatter.java21.Java21;
 import software.darkmatter.java8.Java8;
 import software.darkmatter.java9.Java9;
 
@@ -11,6 +12,7 @@ public class Main {
     private static final Java9 JAVA_9 = new Java9();
     private static final Java10 JAVA_10 = new Java10();
     private static final Java11 JAVA_11 = new Java11();
+    private static final Java21 JAVA_21 = new Java21();
 
     public static void main(String[] args) throws Exception {
         JAVA_8.lambda();
@@ -36,5 +38,7 @@ public class Main {
         JAVA_10.orElseThrow();
 
         JAVA_11.httpClient();
+
+        JAVA_21.patternMatching();
     }
 }
