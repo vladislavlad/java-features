@@ -40,5 +40,7 @@ public class Main {
         JAVA_11.httpClient();
 
         JAVA_21.patternMatching();
+        JAVA_21.patternMatchingWhen();
+        JAVA_21.patternMatchingNull();
     }
 }
