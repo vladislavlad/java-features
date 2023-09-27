@@ -42,5 +42,8 @@ public class Main {
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();
         JAVA_21.patternMatchingNull();
+        JAVA_21.patternMatchingRecord();
+        JAVA_21.patternMatchingNestedRecord();
+        JAVA_21.patternMatchingInstanceOf();
     }
 }

@@ -50,4 +50,39 @@ public class Java21 {
         System.out.println(result);
         System.out.println(result2);
     }
+
+    public record Point(
+        int x,
+        int y
+    ) {}
+
+    public void patternMatchingRecord() {
+        Object obj = new Point(0, 2);
+
+        switch (obj) {
+            case Point(int x, int y) -> System.out.println("Point x: " + x + "; y: " + y);
+            default -> System.out.println("Not a point");
+        }
+    }
+
+    record ColoredPoint(Point p, Color c) {
+
+
+        enum Color {RED, GREEN, BLUE;}
+    }
+    public void patternMatchingNestedRecord() {
+        Object obj = new ColoredPoint(new Point(0, 2), ColoredPoint.Color.RED);
+
+        if (obj instanceof ColoredPoint(Point(int x, int y), ColoredPoint.Color c)) {
+            System.out.println("Point x: " + x + "; y: " + y + "; color: " + c);
+        }
+    }
+
+    public void patternMatchingInstanceOf() {
+        Object obj = 1;
+
+        if (obj instanceof Integer i) {
+            System.out.println("Integer i: " + i);
+        }
+    }
 }
