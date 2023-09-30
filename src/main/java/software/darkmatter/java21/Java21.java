@@ -67,9 +67,9 @@ public class Java21 {
 
     record ColoredPoint(Point p, Color c) {
 
-
         enum Color {RED, GREEN, BLUE;}
     }
+
     public void patternMatchingNestedRecord() {
         Object obj = new ColoredPoint(new Point(0, 2), ColoredPoint.Color.RED);
 
