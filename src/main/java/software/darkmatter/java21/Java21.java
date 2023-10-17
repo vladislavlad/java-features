@@ -8,11 +8,11 @@ public class Java21 {
         Object obj = new Object();
 
         final String result = switch (obj) {
-            case Integer i -> String.format("Integer %d", i);
-            case Long l -> String.format("Long %d", l);
-            case Double d -> String.format("Double %f", d);
-            case String s -> String.format("String %s", s);
-            default -> obj.toString();
+            case Integer i -> String.format("Integer: %d", i);
+            case Long l -> String.format("Long: %d", l);
+            case Double d -> String.format("Double: %f", d);
+            case String s -> String.format("String: %s", s);
+            default -> String.format("Default: %s", obj);
         };
 
         System.out.println(result);

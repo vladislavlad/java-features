@@ -38,6 +38,12 @@ public class Main {
         JAVA_10.orElseThrow();
 
         JAVA_11.httpClient();
+        JAVA_11.stringNewMethods();
+        JAVA_11.fileNewMethods();
+        JAVA_11.toArray();
+        JAVA_11.predicateNot();
+        JAVA_11.varLambda();
+        JAVA_11.nestedMembers();
 
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();
