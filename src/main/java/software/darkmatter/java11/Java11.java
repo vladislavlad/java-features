@@ -73,12 +73,14 @@ public class Java11 {
                                           .collect(Collectors.toSet());
         boolean containsNestedMembers = nestedMembers.contains(FirstClass.class.getName())
                                         && nestedMembers.contains(FirstClass.NestedClass.class.getName());
+        assert containsNestedMembers;
+
         System.out.println("getNestMembers() returns class and nested member: " + containsNestedMembers);
     }
 
-    class FirstClass {
+    static class FirstClass {
 
-        class NestedClass {
+        static class NestedClass {
         }
     }
 }
