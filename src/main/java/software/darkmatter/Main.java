@@ -48,6 +48,8 @@ public class Main {
         JAVA_11.nestedMembers();
 
         JAVA_12.stringNewMethods();
+        JAVA_12.teeingCollector();
+        JAVA_12.compactNumberFormat();
 
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();
