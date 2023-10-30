@@ -3,6 +3,7 @@ package software.darkmatter;
 import software.darkmatter.java10.Java10;
 import software.darkmatter.java11.Java11;
 import software.darkmatter.java12.Java12;
+import software.darkmatter.java14.Java14;
 import software.darkmatter.java21.Java21;
 import software.darkmatter.java8.Java8;
 import software.darkmatter.java9.Java9;
@@ -14,6 +15,7 @@ public class Main {
     private static final Java10 JAVA_10 = new Java10();
     private static final Java11 JAVA_11 = new Java11();
     private static final Java12 JAVA_12 = new Java12();
+    private static final Java14 JAVA_14 = new Java14();
     private static final Java21 JAVA_21 = new Java21();
 
     public static void main(String[] args) throws Exception {
@@ -50,6 +52,10 @@ public class Main {
         JAVA_12.stringNewMethods();
         JAVA_12.teeingCollector();
         JAVA_12.compactNumberFormat();
+        JAVA_12.fileMismatch();
+
+        JAVA_14.switchExpression();
+        JAVA_14.textBlock();
 
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();
