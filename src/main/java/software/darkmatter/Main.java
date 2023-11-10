@@ -60,6 +60,7 @@ public class Main {
         JAVA_14.textBlock();
 
         JAVA_15.sealedClass();
+        JAVA_15.recordClass();
 
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();

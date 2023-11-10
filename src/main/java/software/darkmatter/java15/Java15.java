@@ -38,4 +38,11 @@ public class Java15 {
             return gradeId;
         }
     }
+
+    public void recordClass() {
+        User user = new User(1L, "John");
+        System.out.println(user);
+    }
+
+    public record User(Long id, String name) {}
 }
