@@ -2,6 +2,15 @@ package software.darkmatter.java15;
 
 public class Java15 {
 
+    public void textBlock() {
+        var text = """
+            Hello World
+            From TextBlock
+            """;
+
+        System.out.print(text);
+    }
+
     public void sealedClass() {
         Person person = new Employee(1);
 

@@ -57,8 +57,8 @@ public class Main {
         JAVA_12.fileMismatch();
 
         JAVA_14.switchExpression();
-        JAVA_14.textBlock();
 
+        JAVA_15.textBlock();
         JAVA_15.sealedClass();
         JAVA_15.recordClass();
 

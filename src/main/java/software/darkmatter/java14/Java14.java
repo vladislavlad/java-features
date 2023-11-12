@@ -14,13 +14,4 @@ public class Java14 {
         };
         System.out.println("Is today a Working day: " + isWorkingDay);
     }
-
-    public void textBlock() {
-        var text = """
-            Hello World
-            From TextBlock
-            """;
-
-        System.out.print(text);
-    }
 }
