@@ -33,14 +33,14 @@ public class Java12 {
 
     public void compactNumberFormat() {
         System.out.println("NumberFormat.Style.SHORT");
-        NumberFormat shortFormat = NumberFormat.getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.SHORT);
+        NumberFormat shortFormat = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);
         shortFormat.setMaximumFractionDigits(2);
         String formatted = shortFormat.format(2592);
 
         assert "2.59K".equals(formatted);
         System.out.println(formatted);
 
-        NumberFormat longFormat = NumberFormat.getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.LONG);
+        NumberFormat longFormat = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.LONG);
         longFormat.setMaximumFractionDigits(2);
 
         String formattedLong = longFormat.format(2592);
