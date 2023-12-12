@@ -69,6 +69,8 @@ public class Main {
         JAVA_16.dayPeriodSupport();
         JAVA_16.streamToList();
 
+        JAVA_17.randomGeneratorInterface();
+
         JAVA_21.patternMatching();
         JAVA_21.patternMatchingWhen();
         JAVA_21.patternMatchingNull();
