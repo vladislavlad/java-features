@@ -9,6 +9,7 @@ import software.darkmatter.java16.Java16;
 import software.darkmatter.java17.Java17;
 import software.darkmatter.java21.Java21;
 import software.darkmatter.java22.Java22;
+import software.darkmatter.java23.Java23;
 import software.darkmatter.java8.Java8;
 import software.darkmatter.java9.Java9;
 
@@ -25,6 +26,7 @@ public class Main {
     private static final Java17 JAVA_17 = new Java17();
     private static final Java21 JAVA_21 = new Java21();
     private static final Java22 JAVA_22 = new Java22();
+    private static final Java23 JAVA_23 = new Java23();
 
     public static void main(String[] args) throws Exception {
         JAVA_8.lambda();
@@ -79,5 +81,7 @@ public class Main {
         JAVA_21.patternMatchingRecord();
         JAVA_21.patternMatchingNestedRecord();
         JAVA_21.patternMatchingInstanceOf();
+
+        JAVA_22.unnamedVar();
     }
 }
