@@ -83,5 +83,6 @@ public class Main {
         JAVA_21.patternMatchingInstanceOf();
 
         JAVA_22.unnamedVar();
+        JAVA_22.unnamedPattern();
     }
 }

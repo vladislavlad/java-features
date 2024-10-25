@@ -25,4 +25,22 @@ public class Java22 {
                              .toList();
         randomList.forEach(System.out::println);
     }
+
+    public void unnamedPattern() {
+        Color color = new Color.Green();
+        switch (color) {
+            case Color.Green _, Color.Blue _ -> System.out.println("Color is: " + color);
+            case Color.Red _ -> System.out.println("Error, color is Red");
+            default -> throw new IllegalStateException("Unexpected value: " + color);
+        }
+    }
+
+    sealed static class Color {
+
+        static final class Red extends Color {}
+
+        static final class Blue extends Color {}
+
+        static final class Green extends Color {}
+    }
 }
