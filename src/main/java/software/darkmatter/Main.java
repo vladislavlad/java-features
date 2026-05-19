@@ -28,7 +28,7 @@ public class Main {
     private static final Java22 JAVA_22 = new Java22();
     private static final Java23 JAVA_23 = new Java23();
 
-    public static void main(String[] args) throws Exception {
+    static void main(String[] args) throws Exception {
         JAVA_8.lambda();
         JAVA_8.methodReference();
         JAVA_8.streamApi();

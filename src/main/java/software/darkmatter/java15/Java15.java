@@ -50,6 +50,7 @@ public class Java15 {
 
     public void recordClass() {
         User user = new User(1L, "John");
+        var id = user.id;
         System.out.println(user);
     }
 
