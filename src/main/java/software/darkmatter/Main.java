@@ -12,6 +12,7 @@ import software.darkmatter.java22.Java22;
 import software.darkmatter.java23.Java23;
 import software.darkmatter.java24.Java24;
 import software.darkmatter.java25.Java25;
+import software.darkmatter.java26.Java26;
 import software.darkmatter.java8.Java8;
 import software.darkmatter.java9.Java9;
 
@@ -31,8 +32,9 @@ public class Main {
     private static final Java23 JAVA_23 = new Java23();
     private static final Java24 JAVA_24 = new Java24();
     private static final Java25 JAVA_25 = new Java25();
+    private static final Java26 JAVA_26 = new Java26();
 
-    static void main(String[] args) throws Exception {
+    static void main() throws Exception {
         JAVA_8.lambda();
         JAVA_8.methodReference();
         JAVA_8.streamApi();
@@ -101,5 +103,8 @@ public class Main {
         JAVA_25.moduleImports();
         JAVA_25.compactSourceFiles();
         JAVA_25.flexibleConstructors();
+
+        JAVA_26.http3();
+        JAVA_26.finalFieldRestrictions();
     }
 }

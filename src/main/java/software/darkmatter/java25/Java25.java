@@ -17,9 +17,7 @@ public class Java25 {
         // Bind scoped values and execute code within their scope
         ScopedValue.where(USER, "alice")
                    .where(REQUEST_ID, 42)
-                   .run(() -> {
-                       processRequest();
-                   });
+                   .run(this::processRequest);
 
         // Scoped values are no longer accessible outside their scope
         // USER.get() would throw IllegalStateException here
@@ -31,9 +29,7 @@ public class Java25 {
         System.out.println("Processing request " + requestId + " for user " + user);
 
         // Nested scope: rebind USER for downstream calls
-        ScopedValue.where(USER, "bob").run(() -> {
-            downstreamCall();
-        });
+        ScopedValue.where(USER, "bob").run(this::downstreamCall);
 
         // Original binding is restored after nested scope
         System.out.println("Back to user: " + USER.get());
@@ -104,6 +100,7 @@ public class Java25 {
         System.out.println("  - Enables fail-fast argument validation");
         System.out.println("  - Fields can be initialized before superclass constructor");
         System.out.println("  - Prevents superclass from seeing uninitialized subclass state");
+        System.out.println("  - Employee constructed { name: " + employee.name + ", age: " + employee.age + ", officeId: " + employee.officeId + " }");
     }
 
     static class Person {
