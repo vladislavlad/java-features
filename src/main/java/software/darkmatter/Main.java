@@ -10,6 +10,8 @@ import software.darkmatter.java17.Java17;
 import software.darkmatter.java21.Java21;
 import software.darkmatter.java22.Java22;
 import software.darkmatter.java23.Java23;
+import software.darkmatter.java24.Java24;
+import software.darkmatter.java25.Java25;
 import software.darkmatter.java8.Java8;
 import software.darkmatter.java9.Java9;
 
@@ -27,6 +29,8 @@ public class Main {
     private static final Java21 JAVA_21 = new Java21();
     private static final Java22 JAVA_22 = new Java22();
     private static final Java23 JAVA_23 = new Java23();
+    private static final Java24 JAVA_24 = new Java24();
+    private static final Java25 JAVA_25 = new Java25();
 
     static void main(String[] args) throws Exception {
         JAVA_8.lambda();
@@ -84,5 +88,18 @@ public class Main {
 
         JAVA_22.unnamedVar();
         JAVA_22.unnamedPattern();
+
+        JAVA_23.ffmApi();
+
+        JAVA_24.streamGatherers();
+        JAVA_24.classFileApi();
+        JAVA_24.mlKem();
+        JAVA_24.mlDsa();
+
+        JAVA_25.scopedValues();
+        JAVA_25.keyDerivationFunction();
+        JAVA_25.moduleImports();
+        JAVA_25.compactSourceFiles();
+        JAVA_25.flexibleConstructors();
     }
 }
